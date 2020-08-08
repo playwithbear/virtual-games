@@ -58,7 +58,12 @@ $autoload['packages'] = array();
 |
 |	$autoload['libraries'] = array('user_agent' => 'ua');
 */
-$autoload['libraries'] = array('database', 'session');
+
+$codeigniter_libraries = array('database', 'session');
+
+$custom_libraries = array();
+
+$autoload['libraries'] = array_merge($codeigniter_libraries, $custom_libraries);
 
 /*
 | -------------------------------------------------------------------
@@ -89,7 +94,12 @@ $autoload['drivers'] = array();
 |
 |	$autoload['helper'] = array('url', 'file');
 */
-$autoload['helper'] = array('url', 'form');
+
+$codeigniter_helpers = array('url', 'form');
+
+$custom_helpers = array('general');
+
+$autoload['helper'] = array_merge($codeigniter_helpers, $custom_helpers);
 
 /*
 | -------------------------------------------------------------------

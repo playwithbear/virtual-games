@@ -1,6 +1,8 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+$route['migrate'] = 'migrate/index';
+
 $route['(:any)'] = 'pages/$1';
 $route['default_controller'] = 'pages';
 $route['404_override'] = '';
