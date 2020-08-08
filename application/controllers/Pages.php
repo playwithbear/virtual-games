@@ -5,6 +5,11 @@ class Pages extends CI_Controller {
 	public function index() {
 
 		$data['title'] = 'Welcome to Virtual Games - Home';
+		$data['library'] = $this->library_model->get_games();
+		$data['gallery_data'] = array(
+			'library_length' => count($data['library']),
+			'row_count' => ceil(count($data['library'])/3),
+		);
 
 		$this->load->view('inc/header', $data);
 		$this->load->view('pages/index', $data);

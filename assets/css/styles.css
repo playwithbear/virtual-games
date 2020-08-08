@@ -9,3 +9,7 @@ th, td {
 section {
     padding: 1em 0 1em 0;
 }
+
+.card-deck {
+    padding-bottom: 1rem;
+}
