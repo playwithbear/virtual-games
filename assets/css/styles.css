@@ -1,0 +1,11 @@
+body {
+    padding-top: 4.5rem;
+}
+
+th, td {
+    text-align: center;
+}
+
+section {
+    padding: 1em 0 1em 0;
+}
