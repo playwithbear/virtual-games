@@ -1,28 +1,24 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Pages extends CI_Controller {
+class Rooms extends CI_Controller {
 
-	public function index() {
+	public function create($id) {
 
-		$data['title'] = 'Welcome to Virtual Games';
+		$data['title'] = 'CREATE A ROOM! - ' . $id;
 		$data['library'] = $this->library_model->get_games();
-		$data['gallery_data'] = array(
-			'library_length' => count($data['library']),
-			'row_count' => ceil(count($data['library'])/3),
-		);
 
 		$this->load->view('inc/header', $data);
-		$this->load->view('pages/index', $data);
+		$this->load->view('rooms/create', $data);
 		$this->load->view('inc/footer');
 
 	}
 
-	public function about() {
+	public function join() {
 
-		$data['title'] = 'About Virtual Games';
+		$data['title'] = 'Join a Game';
 
 		$this->load->view('inc/header', $data);
-		$this->load->view('pages/about', $data);
+		$this->load->view('rooms/join', $data);
 		$this->load->view('inc/footer');
 
 	}

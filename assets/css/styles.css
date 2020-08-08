@@ -13,3 +13,17 @@ section {
 .card-deck {
     padding-bottom: 1rem;
 }
+
+.btn-primary {
+    background-color: #7413dc !important;
+    border-color: #7413dc !important;
+}
+
+.btn-primary:hover {
+    background-color: #5b0fad !important;
+    border-color: #5b0fad !important;
+}
+
+.container {
+    padding-top: 1rem;
+}

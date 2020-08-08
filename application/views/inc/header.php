@@ -69,13 +69,13 @@
                         </div>
                     </li> -->
                     <li class="nav-item">
-                        <a class="nav-link" href="<?= base_url(); ?>test">Another Page</a>
+                        <a class="nav-link" href="<?= base_url(); ?>about">About</a>
                     </li>
                 </ul>
             </div>
-            <!-- <span class="navbar-text">
-                Spot prices last updated <?= $spot_time; ?> minutes ago
-            </span> -->
+            <span class="navbar-text">
+                <a href="<?= base_url() . 'join'; ?>" class="btn btn-primary">Join a game</a>
+            </span>
         </nav>
     </header>
     

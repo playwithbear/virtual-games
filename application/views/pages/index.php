@@ -3,8 +3,6 @@
     <h1><?= $title; ?></h1>
 
     <section>
-        <h2>The Games</h2>
-
         <?php for ($row = 1; $row <= $gallery_data['row_count']; $row++) : ?>
 
             <div class="card-deck">
@@ -20,7 +18,7 @@
                         <div class="card-body">
                             <h5 class="card-title"><?= $library[$key]['name']; ?></h5>
                             <p class="card-text"><?= $library[$key]['description']; ?></p>
-                            <a href="#" class="btn btn-primary">Create Game</a>
+                            <a href="<?= base_url() . 'create/' . $library[$key]['id']; ?>" class="btn btn-primary">Create Game</a>
                         </div>
                     </div>
 
