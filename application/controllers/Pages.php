@@ -27,6 +27,13 @@ class Pages extends CI_Controller {
 
 	}
 
+	/**
+	 * For development purposes only!!!
+	 */
+	// public function unset_all_session_data() {
+	// 	$this->session->sess_destroy();
+	// }
+
 
 	// ===================================== PRIVATE FUNCTIONS =====================================
 	

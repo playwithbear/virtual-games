@@ -1,8 +1,12 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-$route['gamemaster/battleships'] = 'games/battleships/index';
+// Game specific routes
+    // Battleships
+    $route['gamemaster/battleships'] = 'games/battleships/gamemaster_index';
+    $route['players/battleships'] = 'games/battleships/player_index';
 
+// General Routes
 $route['join'] = 'rooms/join';
 $route['create/(:any)'] = 'rooms/create/$1';
 

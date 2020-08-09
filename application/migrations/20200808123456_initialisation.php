@@ -61,11 +61,16 @@ class Migration_Initialisation extends CI_Migration
                 'type' => 'VARCHAR(255)',
                 'comment' => 'Creator of the room'
             ),
+            'accepting_players' => array(
+                'type' => 'INT',
+                'default' => 1,
+                'comment' => 'Default is 1, accepting players. Will set to 0 once game begins.',
+            ),
             'closed' => array(
                 'type' => 'INT',
                 'default' => 0,
                 'comment' => 'When created room is not closed, thus false (0). When closed, update to one.',
-            )
+            ),
         );
         $this->dbforge->add_field($rooms_table);
         $this->dbforge->add_key('id', TRUE);
@@ -109,6 +114,7 @@ class Migration_Initialisation extends CI_Migration
             ),
             'score' => array(
                 'type' => 'INT',
+                'default' => 0,
                 'comment' => 'The players score',
             ),
         );
