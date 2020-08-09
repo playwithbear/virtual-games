@@ -19,6 +19,10 @@ class Migration_Initialisation extends CI_Migration
                 'type' => 'VARCHAR(255)',
                 'comment' => 'Name of the game'
             ),
+            'name_slug' => array(
+                'type' => 'VARCHAR(255)',
+                'comment' => 'Lowercase slug name of the game'
+            ),
             'description' => array(
                 'type' => 'TEXT',
                 'comment' => 'Description of the game'
@@ -53,6 +57,10 @@ class Migration_Initialisation extends CI_Migration
                 'type' => 'VARCHAR(4)',
                 'comment' => 'Code of the room'
             ),
+            'created_by' => array(
+                'type' => 'VARCHAR(255)',
+                'comment' => 'Creator of the room'
+            ),
             'closed' => array(
                 'type' => 'INT',
                 'default' => 0,
@@ -64,7 +72,7 @@ class Migration_Initialisation extends CI_Migration
         $this->dbforge->create_table('rooms');
 
         // Have to do separately because CI is weird (To have default as CURRENT_TIMESTAMP)
-        $this->db->query("ALTER TABLE `rooms` ADD `created_on` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP AFTER `room_code`;");
+        $this->db->query("ALTER TABLE `rooms` ADD `created_on` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP AFTER `created_by`;");
 
 
 

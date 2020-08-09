@@ -19,6 +19,23 @@ function generate_string($strength = 4) {
 }
 
 /**
+ * Generate Number String
+ * 
+ * Generates a random string of integers
+ * 
+ * @param int $strength (Optional) The length of the string to generate. Default is 8 characters.
+ */
+function generate_number_string($strength = 8) {
+    $random_string = '';
+    for($i = 0; $i < $strength; $i++) {
+        $random_character = mt_rand(0, 9);
+        $random_string .= $random_character;
+    }
+
+    return $random_string;
+}
+
+/**
  * Auto Refresh
  * 
  * Injects JS to automatically refresh the page
